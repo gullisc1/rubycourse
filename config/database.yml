@@ -21,5 +21,4 @@ test:
   database: db/test_new
 
 production:
-  <<: *default
-  database: db/production.new
+  database: ENV['DATABASE_URL']
