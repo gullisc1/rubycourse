@@ -1,5 +1,4 @@
-
-<h2 class= "text-center mt-4"><%= @article.title%></h2>
+<h2 c><%= @article.title%></h2>
 
 <div class="container">
   <div class="row justify-content-md-center">
@@ -10,7 +9,7 @@
         </div>
         <div class="card-body">
           <div class="card-text text-left"><%= simple_format(@article.description) %></div> 
-          <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-info" %>
+          <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
           <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
         </div>
         <div class="card-footer text-muted">
